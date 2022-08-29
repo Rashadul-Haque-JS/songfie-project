@@ -1,0 +1,52 @@
+@import '~bootstrap/scss/bootstrap.scss';
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Poppins:wght@400;500;600&display=swap');
+
+$body-bg:#ffdc62;
+$secondary-color:#E51B23;
+$optional-blue:#0042E4;
+$optional-royalblue:#0042E4;
+$optional-gray: #272727;
+$optional-darkgray:#151E26;
+$font-primary:'Montserrat', sans-serif;
+$font-headLine:'Poppins', sans-serif;
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    background-color:$body-bg;
+    -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+  font-family: $font-primary;
+
+}
+
+a{
+  text-decoration: none;
+  font-weight: bold;
+  padding: 12px 0px;
+  color:blue;
+}
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,22 @@
+
+.audioPlayer{
+    display: flex;
+    justify-content:center;
+    align-items: flex-end;
+    padding:12px 0px 2px 0px;
+
+    width:100%;
+    z-index:1;
+    bottom: 0;
+    position: fixed;
+    right: 0;
+
+
+   audio{
+        width: 100vw;
+        height: 32px;
+        border-radius: none;
+        background-color: #ffffff;
+    }
+
+}

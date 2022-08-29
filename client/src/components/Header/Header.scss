@@ -1,0 +1,93 @@
+@import '../../common/style.scss';
+
+.primaryHeader,
+.secondaryHeader {
+    background-color: none;
+    padding-bottom: 20px;
+
+    .headerUpper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: $optional-darkgray;
+        width: 100vw;
+        padding: 0px 16px;
+
+        a {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            img {
+                width: 60%;
+                padding-top: 12px;
+            }
+        }
+
+        .headerUpperUser {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            .microphone {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-right: 12px;
+                background: linear-gradient(135deg, #5335cf 0%, blue 25%, #de005e 50%, blue 75%, #5335cf 100%);
+                animation: animate 2s linear infinite;
+                background-size: 400%;
+                background-clip: border-box;
+                -webkit-background-clip: border-box;
+                -webkit-text-fill-color: transparent;
+                width: 30px;
+                height: 30px;
+                border-radius: 100%;
+                cursor: pointer;
+            }
+
+            @keyframes animate {
+                100% {
+                    background-position: 100%;
+                }
+            }
+
+        }
+
+
+    }
+
+    .headerLowerUser {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        margin-right: 12px;
+
+        a {
+            width: fit-content;
+            height: fit-content;
+            padding-right: 12px;
+
+            .btn-primary {
+                background: #000000;
+                outline:none;
+                border:none;
+
+            }
+        }
+
+        .username {
+            display: flex;
+
+            span {
+                font-weight: bold;
+                color: #ff6e40;
+                cursor: pointer;
+                margin-left:16px;
+            }
+
+        }
+
+    }
+
+}

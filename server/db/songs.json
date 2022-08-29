@@ -1,0 +1,365 @@
+[
+    {
+        "title": "Churake dil mera goria",
+        "user": "sky_top",
+        "image": "dj.png",
+        "original_singer": "Shaan & Alka Y",
+        "track": "ams.mp3",
+        "likes": 5,
+        "isPlaying": false,
+        "comments": [
+            {
+                "id": "1",
+                "text": "First comment",
+                "username": "Jack",
+                "userId": "1",
+                "parentId": null,
+                "createdAt": "2022-08-24T9:59:58.093Z"
+            },
+            {
+                "id": "2",
+                "userId": 2,
+                "text": "Second comment",
+                "username": "John",
+                "parentId": null,
+                "createdAt": "2022-08-24T9:55:58.093Z"
+            },
+            {
+                "id": "3",
+                "text": "First comment first child",
+                "username": "John",
+                "userId": "2",
+                "parentId": "1",
+                "createdAt": "2022-08-24T9:59:58.093Z"
+            },
+            {
+                "id": "4",
+                "text": "Second comment second child",
+                "username": "John",
+                "userId": "2",
+                "parentId": "2",
+                "createdAt": "2022-08-24T9:59:59.093Z"
+            }
+        ],
+        "language": "hindi"
+    },
+    {
+        "title": "Zara si dil main",
+        "user": "sky_top",
+        "image": "zarasa.png",
+        "original_singer": "Shaan & Alka Y",
+        "track": "zarasa.mp3",
+        "likes": 3,
+        "isPlaying": false,
+        "comments": [
+            {
+                "id": "1",
+                "text": "First comment",
+                "username": "Jack",
+                "userId": "1",
+                "parentId": null,
+                "createdAt": "2022-08-24T9:60:08.093Z"
+            },
+            {
+                "id": "2",
+                "text": "Second comment",
+                "username": "John",
+                "userId": "2",
+                "parentId": null,
+                "createdAt": "2022-08-24T9:57:58.093Z"
+            },
+            {
+                "id": "3",
+                "text": "First comment first child",
+                "username": "John",
+                "userId": "2",
+                "parentId": "1",
+                "createdAt": "2022-08-24T9:59:51.093Z"
+            },
+            {
+                "id": "4",
+                "text": "Second comment second child",
+                "username": "John",
+                "userId": "2",
+                "parentId": "2",
+                "createdAt": "2022-08-24T9:59:54.093Z"
+            }
+        ],
+        "language": "hindi"
+    },
+    {
+
+        "title": "Amar sarata din bristi",
+        "user": "sky_top",
+        "image": "bristi.png",
+        "original_singer": "Shaan & Alka Y",
+        "track": "bristi.mp3",
+        "likes": 8,
+        "isPlaying": false,
+        "comments": [
+            {
+                "id": "1",
+                "text": "First comment",
+                "username": "Jack",
+                "userId": "1",
+                "parentId": null,
+                "createdAt": "2022-08-24T9:58:58.093Z"
+            },
+            {
+                "id": "2",
+                "text": "Second comment",
+                "username": "John",
+                "userId": "2",
+                "parentId": null,
+                "createdAt": "2022-08-24T10:09:58.093Z"
+            },
+            {
+                "id": "3",
+                "text": "First comment first child",
+                "username": "John",
+                "userId": "2",
+                "parentId": "1",
+                "createdAt": "2022-08-24T10:00:58.093Z"
+            },
+            {
+                "id": "4",
+                "text": "Second comment second child",
+                "username": "John",
+                "userId": "2",
+                "parentId": "2",
+                "createdAt": "2022-08-24T10:01:58.093Z"
+            }
+        ],
+        "language": "bangla"
+    },
+    {
+
+
+        "title": "just beat it",
+        "user": "sky_top",
+        "image": "mj.png",
+        "original_singer": "M. Jackson",
+        "track": "beatit.mp3",
+        "likes": 12,
+        "isPlaying": false,
+        "comments": [
+            {
+                "id": "1",
+                "text": "First comment",
+                "username": "Jack",
+                "userId": "1",
+                "parentId": null,
+                "createdAt": "2022-08-24T10:01:00.093Z"
+            },
+            {
+                "id": "2",
+                "text": "Second comment",
+                "username": "John",
+                "userId": "2",
+                "parentId": null,
+                "createdAt": "2022-08-24T10:01:50.093Z"
+            },
+            {
+                "id": "3",
+                "text": "First comment first child",
+                "username": "John",
+                "userId": "2",
+                "parentId": "1",
+                "createdAt": "2022-08-24T10:01:08.093Z"
+            },
+            {
+                "id": "4",
+                "text": "Second comment second child",
+                "username": "John",
+                "userId": "2",
+                "parentId": "2",
+                "createdAt": "2022-08-24T10:04:50.093Z"
+            }
+        ],
+        "language": "english"
+    },
+    {
+
+
+        "title": "main agar kahoon",
+        "user": "sky_top",
+        "image": "main.png",
+        "original_singer": "Shaan & Alka Y",
+        "track": "mainagar.mp3",
+        "likes": 0,
+        "isPlaying": false,
+        "comments": [
+            {
+                "id": "1",
+                "text": "First comment",
+                "username": "Jack",
+                "userId": "1",
+                "parentId": null,
+                "createdAt": "2022-08-24T10:06:00.093Z"
+            },
+            {
+                "id": "2",
+                "text": "Second comment",
+                "username": "John",
+                "userId": "2",
+                "parentId": null,
+                "createdAt": "2022-08-24T10:02:07.093Z"
+            },
+            {
+                "id": "3",
+                "text": "First comment first child",
+                "username": "John",
+                "userId": "2",
+                "parentId": "1",
+                "createdAt": "2022-08-24T10:00:50.093Z"
+            },
+            {
+                "id": "4",
+                "text": "Second comment second child",
+                "username": "John",
+                "userId": "2",
+                "parentId": "2",
+                "createdAt": "2022-08-24T10:03:08.093Z"
+            }
+        ],
+        "language": "hindi"
+    },
+    {
+
+
+        "title": "vanga e mon nia tumi",
+        "user": "sky_top",
+        "image": "ab.png",
+        "original_singer": "Ayub Bacchu",
+        "track": "vangamon.mp3",
+        "likes": 5,
+        "isPlaying": false,
+        "comments": [
+            {
+                "id": "1",
+                "text": "First comment",
+                "username": "Jack",
+                "userId": "1",
+                "parentId": null,
+                "createdAt": "2022-08-24T10:00:04.093Z"
+            },
+            {
+                "id": "2",
+                "text": "Second comment",
+                "username": "John",
+                "userId": "2",
+                "parentId": null,
+                "createdAt": "2022-08-24T10:00:09.093Z"
+            },
+            {
+                "id": "3",
+                "text": "First comment first child",
+                "username": "John",
+                "userId": "2",
+                "parentId": "1",
+                "createdAt": "2022-08-24T10:00:03.093Z"
+            },
+            {
+                "id": "4",
+                "text": "Second comment second child",
+                "username": "John",
+                "userId": "2",
+                "parentId": "2",
+                "createdAt": "2022-08-24T10:00:01.093Z"
+            }
+        ],
+        "language": "bangla"
+    },
+    {
+
+
+        "title": "wada raha payaar sa",
+        "user": "sky_top",
+        "image": "wada.png",
+        "original_singer": "Shaan & Alka Y",
+        "track": "wadaraha.mp3",
+        "likes": 8,
+        "isPlaying": false,
+        "comments": [
+            {
+                "id": "1",
+                "text": "First comment",
+                "username": "Jack",
+                "userId": "1",
+                "parentId": null,
+                "createdAt": "2022-08-24T10:02:48.093Z"
+            },
+            {
+                "id": "2",
+                "text": "Second comment",
+                "username": "John",
+                "userId": "2",
+                "parentId": null,
+                "createdAt": "2022-08-24T10:04:58.093Z"
+            },
+            {
+                "id": "3",
+                "text": "First comment first child",
+                "username": "John",
+                "userId": "2",
+                "parentId": "1",
+                "createdAt": "2022-08-24T10:07:58.093Z"
+            },
+            {
+                "id": "4",
+                "text": "Second comment second child",
+                "username": "John",
+                "userId": "2",
+                "parentId": "2",
+                "createdAt": "2022-08-24T10:09:58.093Z"
+            }
+        ],
+        "language": "hindi"
+    },
+    {
+
+
+        "title": "dilne e kaha hain",
+        "user": "sky_top",
+        "image": "dilne.png",
+        "original_singer": "Shaan & Alka Y",
+        "track": "dilne.mp3",
+        "likes": 8,
+        "isPlaying": false,
+        "comments": [
+            {
+                "id": "1",
+                "text": "First comment",
+                "username": "Jack",
+                "userId": "1",
+                "parentId": null,
+                "createdAt": "2022-08-24T10:02:48.093Z"
+            },
+            {
+                "id": "2",
+                "text": "Second comment",
+                "username": "John",
+                "userId": "2",
+                "parentId": null,
+                "createdAt": "2022-08-24T10:04:58.093Z"
+            },
+            {
+                "id": "3",
+                "text": "First comment first child",
+                "username": "John",
+                "userId": "2",
+                "parentId": "1",
+                "createdAt": "2022-08-24T10:07:58.093Z"
+            },
+            {
+                "id": "4",
+                "text": "Second comment second child",
+                "username": "John",
+                "userId": "2",
+                "parentId": "2",
+                "createdAt": "2022-08-24T10:09:58.093Z"
+            }
+        ],
+        "language": "hindi"
+    }
+]

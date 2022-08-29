@@ -1,0 +1,25 @@
+@import '../../common/style.scss';
+.footer{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 2fr 7fr 1fr;
+    height:500px;
+    margin-top: 100px;
+    .upperFooter{
+        background-color: $optional-darkgray;
+        padding:2px 0px;
+    }
+
+    .footerLinks{
+        background-color: $optional-gray;
+        padding:50px 0px;
+
+    }
+    .footerNavigation{
+        display:flex;
+        justify-content:end;
+        align-items:center;
+        background-color:none;
+        padding:4px 24px;
+    }
+}
