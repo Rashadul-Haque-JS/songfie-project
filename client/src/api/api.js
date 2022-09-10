@@ -1,17 +1,18 @@
 import axios from 'axios'
 
-axios.defaults.baseURL = "http://localhost:8080/api";
+axios.defaults.baseURL = "http://localhost:8000/api";
 // auth
 
 export const saveToken = (token) => {
+    console.log(token)
     return axios.defaults.headers.common["Authorization"] = `Bearer ${token}`;
 }
 
 export const login = async (email, password) => {
     return await axios.post("/login", { email, password });
 }
-export const signup = async (name, username, email, password,avatar, role) => {
-    return await axios.post("/signup", { name, username, email, password, avatar,role });
+export const signup = async (formData) => {
+    return await axios.post("/signup", formData);
 }
 
 export const logout = () => {
@@ -23,6 +24,10 @@ export const logout = () => {
 // users
 export const getUsers = async () => {
     return await axios.get('/users/allUsers')
+}
+
+export const getAvatar = async (id) => {
+    return await axios.get(`/images/getUsersAvatar/${id}`)
 }
 
 

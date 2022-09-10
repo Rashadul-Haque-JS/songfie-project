@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import { useSelector } from 'react-redux'
 import SongSuggestion from './SongSuggestion'
 import Comments from '../Comments/Comments'
+import avatar from '../../assets/image/static/round.png'
 
 const SingleSong = () => {
     const inPlay = useSelector((state) => state.audioReducer.inPlay)
@@ -20,7 +21,8 @@ const SingleSong = () => {
                 </div>}
                 <div className="tracksInfo">
                     <div className="userInfo">
-                        <img src={user.avatar} alt='user avatat' />
+                        {user && <img src={avatar} alt='avatar' />}
+                        {!user && <img src={avatar} alt='avatar' />}
                         <div className="userName">
                             <p>Sung by:</p>
                             <h5>{user.username}</h5>

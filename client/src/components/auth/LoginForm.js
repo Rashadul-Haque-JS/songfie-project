@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { useDispatch } from 'react-redux'
 import { Link, useNavigate } from 'react-router-dom'
 import { login, saveToken } from '../../api/api'
-import { addLogedUser, addToken } from '../../features/users/authSlicer'
+import { addLogedUser, addToken,getPhoto } from '../../features/users/authSlicer'
 import { addSignup } from '../../features/booleanSlicer'
 import { setLocalStorage } from '../../common/localStorage'
 
@@ -24,6 +24,7 @@ const LoginForm = () => {
                 dispatch(addToken(res.data.token));
                 setLocalStorage('user', res.data.userData);
                 setLocalStorage('token', res.data.token);
+                // dispatch(getPhoto(res.data.userData._id))
                 navigate('/songs')
             }
 
@@ -35,8 +36,6 @@ const LoginForm = () => {
     const handleSignup = () => {
         dispatch(addSignup());
     }
-
-
 
     return (
         <div className="loginContainer">
