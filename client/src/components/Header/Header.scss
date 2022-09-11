@@ -11,12 +11,13 @@
         align-items: center;
         background-color: $optional-darkgray;
         width: 100vw;
-        padding: 0px 16px;
+        padding: 0px 10px;
 
         a {
             display: flex;
             justify-content: center;
             align-items: center;
+            padding: 0;
 
             img {
                 width: 60%;

@@ -26,7 +26,7 @@ export default function Header() {
     return (
         <div className='primaryHeader sticky-top'>
             <div className='headerUpper '>
-                <div className='microphone'>
+                <div className='menu'>
                     <img src={menu} alt='menu' />
                 </div>
                 <Link to='/'>
