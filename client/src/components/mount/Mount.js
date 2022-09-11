@@ -1,10 +1,11 @@
 import { useEffect } from 'react'
 import { useDispatch } from 'react-redux';
-import { addAudio, addInPlay } from '../../features/audioSlicer';
+import { addAudio} from '../../features/audioSlicer';
 import { getAllSongs, getUsers } from '../../api/api'
 import { addUsers } from '../../features/users/userSlicer';
 import { getLocalStorage } from '../../common/localStorage'
 import { addLogedUser, addToken } from '../../features/users/authSlicer'
+
 
 const Mounts = () => {
   const dispatch = useDispatch()
@@ -16,7 +17,7 @@ const Mounts = () => {
       dispatch(addUsers(userRes.data))
       dispatch(addLogedUser(getLocalStorage('user')))
       dispatch(addToken(getLocalStorage('token')))
-      
+
     }
 
     fetchSong()

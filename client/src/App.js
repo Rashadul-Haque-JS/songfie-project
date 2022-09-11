@@ -8,26 +8,29 @@ import Songs from './components/Songs/Songs'
 import SingleSong from './components/Songs/SingleSong';
 import AudioPlayer from './components/AudioPlayer/AudioPlayer';
 import Mounts from './components/mount/Mount'
-import LoginForm from './components/auth/Auth';
+import Auth from './components/auth/Auth';
+import PageNotFound from './components/helper/PageNotFound';
+import { Toaster } from 'react-hot-toast';
 
 function App() {
   return (
     <div className="App">
       <BrowserRouter>
         <Header />
-        <div className='container'>
+        <div className='container mt-5'>
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/songs" element={<Songs />} />
             <Route path='/songs/:track' element={<SingleSong />} />
-            <Route path='/auth' element={<LoginForm />} />
+            <Route path='/auth' element={<Auth />} />
+            <Route path="*" element={<PageNotFound />} />
           </Routes>
         </div>
         <Footer />
         <Mounts />
         <AudioPlayer />
       </BrowserRouter>
-
+      <Toaster />
     </div>
   );
 }

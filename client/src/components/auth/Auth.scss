@@ -3,10 +3,9 @@
 .auth {
     display: flex;
     justify-content: space-around;
-    height: 100%;
     flex-wrap: wrap-reverse;
     color: #17A9FD;
-    margin-top: 80px;
+    margin-top: 100px;
 
     .loginWrapper {
         display: grid;
@@ -22,8 +21,11 @@
                 color: #17A9FD;
                 text-align: center;
                 padding: 40px 20px;
+              
 
             }
+
+            
         }
     }
 

@@ -5,7 +5,8 @@ import { createSlice } from "@reduxjs/toolkit";
 const initialState = {
     play: false,
     signup: false,
-    reset: false
+    reset: false,
+    isDisabled: false,
 
 }
 
@@ -27,11 +28,17 @@ const booleanSlice = createSlice({
         },
         resetFalse: (state) => {
             state.reset = false
+        },
+        disabled: (state) => {
+            state.isDisabled = true
+        },
+        enabled: (state) => {
+            state.reset = false
         }
 
 
     }
 })
 
-export const { addBoolean, addSignup, removeSignup, resetFalse, resetTrue} = booleanSlice.actions;
+export const { addBoolean, addSignup, removeSignup, resetFalse, resetTrue, disabled, enabled} = booleanSlice.actions;
 export default booleanSlice.reducer;

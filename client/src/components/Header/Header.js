@@ -46,7 +46,7 @@ export default function Header() {
                 </Link>}
                 {user !== null && <div className='username' >
                     <h1 className='h5'>{user.username}</h1>
-                    <span className='logout' onClick={handleLogout}>Logout</span>
+                    <span className='logout text-muted' onClick={handleLogout}>Logout</span>
                 </div>}
 
             </div>}

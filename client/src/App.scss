@@ -35,11 +35,17 @@ body{
 
 }
 
+
+
 a{
   text-decoration: none;
   font-weight: bold;
   padding: 12px 0px;
   color:blue;
+}
+
+h1, h2, h3, h4, h5, h6{
+  font-family: $font-headLine;
 }
 
 

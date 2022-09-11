@@ -20,6 +20,14 @@ export const logout = () => {
     axios.defaults.headers.common['Authorization'] = `Bearer ${empty}`;
 }
 
+export const forgotPassword = async(email) => {
+    return await axios.post("/forgotPassword", { email});
+}
+
+export const resetPassword = async(id,token) => {
+    return await axios.get(`/resetPassword/${id}/${token}`);
+}
+
 
 // users
 export const getUsers = async () => {
