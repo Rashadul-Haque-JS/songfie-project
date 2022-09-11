@@ -1,4 +1,7 @@
 const { Users } = require("../../models/users");
+const { Token } = require("../../models/token");
+
+
 const jwt = require("jsonwebtoken");
 const { InvalidCredentials, } = require("../../error/error");
 
@@ -22,9 +25,11 @@ const login = async (req, res) => {
                 const userData = await Users.findOne({ _id: user._id }).select(
                     "-password"
                 );
-         
+
                 res.json({ userData, token });
             }
+
+
 
         });
     } catch (error) {
