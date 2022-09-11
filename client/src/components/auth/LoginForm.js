@@ -1,13 +1,12 @@
 import React, { useState } from 'react'
-import { useDispatch } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import { Link, useNavigate } from 'react-router-dom'
 import { login, saveToken } from '../../api/api'
 import { addLogedUser, addToken,getPhoto } from '../../features/users/authSlicer'
-import { addSignup } from '../../features/booleanSlicer'
+import { addSignup, resetTrue } from '../../features/booleanSlicer'
 import { setLocalStorage } from '../../common/localStorage'
 
 const LoginForm = () => {
-
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
     const navigate = useNavigate()
@@ -37,6 +36,10 @@ const LoginForm = () => {
         dispatch(addSignup());
     }
 
+    const handelePassword = () => {
+        dispatch(resetTrue())
+    }
+
     return (
         <div className="loginContainer">
             <div className='form-wrapper'>
@@ -45,10 +48,10 @@ const LoginForm = () => {
                     <input type="text" placeholder='password' value={password} onChange={(e) => setPassword(e.target.value)} required />
                     <button>login</button>
                 </form>
-                <div className='manageLogin'>
-                    <Link to='/resetPassword'>
+                <div className='manageLogin' >
+                    <div onClick={handelePassword}>
                         <p className='reset'>Forgot password?</p>
-                    </Link>
+                    </div>
                     <div onClick={handleSignup}>
                         <p className='register' style={{ textDecoration: 'underline' }}>Signup</p>
                     </div>

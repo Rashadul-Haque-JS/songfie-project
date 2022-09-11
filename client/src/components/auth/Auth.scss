@@ -6,7 +6,7 @@
     height: 100%;
     flex-wrap: wrap-reverse;
     color: #17A9FD;
-    margin-top: 40px;
+    margin-top: 80px;
 
     .loginWrapper {
         display: grid;
@@ -78,11 +78,13 @@
                     margin-top: 8px;
                     color: #17A9FD;
                     font-weight:bold;
+                    cursor: pointer;
 
                 }
 
                 .reset{
                     text-decoration: underline;
+                    cursor: pointer;
                 }
 
 

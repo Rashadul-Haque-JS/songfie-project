@@ -9,6 +9,8 @@ import { logout } from '../../api/api'
 import './Header.scss'
 import { removeLocalStorage } from '../../common/localStorage'
 import { logOutUser, removeToken } from '../../features/users/authSlicer'
+import { resetFalse } from '../../features/booleanSlicer'
+
 
 export default function Header() {
     const user = useSelector((state) => state.authReducer.logedInUser)
@@ -40,10 +42,10 @@ export default function Header() {
             </div>
             {pathname !== '/auth' && <div className='headerLowerUser'>
                 {user === null && <Link to='/auth'>
-                    <button className='btn btn-primary btn-sm'>Login</button>
+                    <button className='btn btn-primary btn-sm' onClick={()=>dispatch(resetFalse())}>Login</button>
                 </Link>}
                 {user !== null && <div className='username' >
-                    <h5>{user.name}</h5>
+                    <h1 className='h5'>{user.username}</h1>
                     <span className='logout' onClick={handleLogout}>Logout</span>
                 </div>}
 
