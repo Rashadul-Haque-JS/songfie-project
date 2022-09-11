@@ -38,7 +38,7 @@ const SingleSong = () => {
 
             </div>
             <hr style={{ color: 'white' }} />
-            <div className='songsComments'>
+            <div className='songsComments g-10'>
                 <Comments />
                 <SongSuggestion />
 
