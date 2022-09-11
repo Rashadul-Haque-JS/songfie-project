@@ -20,6 +20,7 @@ app.use(morgan("dev"));
 app.use("/api", routes.auth);
 app.use("/api/users", routes.users);
 app.use("/api/songs", routes.songs);
+app.use("/api/images", routes.images);
 
 
 app.use(errorHandler);

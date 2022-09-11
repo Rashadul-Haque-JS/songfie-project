@@ -1,15 +1,16 @@
-const { Users } = require("../models/users");
+const { Users } = require("../../models/users");
 const jwt = require("jsonwebtoken");
 
 const signup = async (req, res) => {
-    const { name, email, password, username, role } = req.body.name;
-    console.log(req.body.name);
+    const { name, email, password, username, role } = req.body;
+    console.log(req.body);
     const userFound = await Users.findOne({ email }).exec();
 
     let filename = "";
 
     if (req.file && !req.fileError) {
         filename = req.file.filename;
+        console.log(filename);
     }
 
     if (req.fileError) {
@@ -41,7 +42,7 @@ const signup = async (req, res) => {
                     const newUser = await Users.findOne({ _id: user._id }).select(
                         "-password"
                     );
-
+                
                     res.json({ newUser, token, message: "User created successfully!" });
                 }
             });
