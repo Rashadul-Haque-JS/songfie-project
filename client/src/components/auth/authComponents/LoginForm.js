@@ -1,10 +1,11 @@
 import React, { useState } from 'react'
-import { useDispatch, useSelector } from 'react-redux'
-import { Link, useNavigate } from 'react-router-dom'
-import { login, saveToken } from '../../api/api'
-import { addLogedUser, addToken, getPhoto } from '../../features/users/authSlicer'
-import { addSignup, resetTrue } from '../../features/booleanSlicer'
-import { setLocalStorage } from '../../common/localStorage'
+import { useDispatch } from 'react-redux'
+import { useNavigate } from 'react-router-dom'
+import toast from "react-hot-toast";
+import { login } from '../../../api/api'
+import { addLogedUser, addToken } from '../../../features/users/authSlicer'
+import { addSignup, resetTrue } from '../../../features/booleanSlicer'
+import { setLocalStorage } from '../../../common/localStorage'
 
 const LoginForm = () => {
     const [email, setEmail] = useState('')
@@ -18,10 +19,9 @@ const LoginForm = () => {
         try {
             const res = await login(email, password);
             if (res.data.token) {
-                saveToken(res.data.token);
-                dispatch(addLogedUser(res.data.userData));
+                dispatch(addLogedUser(res.data.authUser));
                 dispatch(addToken(res.data.token));
-                setLocalStorage('user', res.data.userData);
+                setLocalStorage('user', res.data.authUser);
                 setLocalStorage('token', res.data.token);
                 // dispatch(getPhoto(res.data.userData._id))
                 navigate('/songs')
@@ -29,6 +29,7 @@ const LoginForm = () => {
 
         } catch (err) {
             console.log(err);
+            toast.error(err.message)
         }
     };
 
@@ -41,9 +42,10 @@ const LoginForm = () => {
     }
 
     return (
-        <div className="loginContainer">
-            <div className='form-wrapper'>
-                <form className='login-container' onSubmit={handleSubmit}>
+        <div className="login">
+            <div className='form-group'>
+                <form className='login-form' onSubmit={handleSubmit}>
+                    <label className='fw-bold'>Login</label>
                     <input type="text" placeholder='user name' value={email} onChange={(e) => setEmail(e.target.value)} required />
                     <input type="text" placeholder='password' value={password} onChange={(e) => setPassword(e.target.value)} required />
                     <button>login</button>
@@ -58,6 +60,7 @@ const LoginForm = () => {
                 </div>
 
             </div>
+
         </div>
     )
 }

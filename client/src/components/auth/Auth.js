@@ -1,9 +1,9 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom';
 import "./Auth.scss";
-import LoginForm from './LoginForm'
-import Signup from './SignupForm'
-import ResetPassword from './ResetPassword'
+import LoginForm from './authComponents/LoginForm'
+import Signup from './authComponents/SignupForm'
+import ForgotPassword from './authComponents/ForgotPassword'
 import { useSelector } from 'react-redux';
 
 export default function Login() {
@@ -14,8 +14,8 @@ export default function Login() {
 
     return (
         <div className='auth'>
-            <div className='loginWrapper'>
-                <div className='loginText'>
+            <div className='authWrapper'>
+                <div className='authText'>
                     {user !== null && <div className=" d-flex flex-column justify-content-center align-items-center">
                         <h1 className='h4'>You are already inlogged!</h1>
                         <Link to="/songs" className='mt-3 text-center'>Back To Gallery</Link>
@@ -26,7 +26,7 @@ export default function Login() {
             </div>
             {user === null && !signup && !reset && < LoginForm />}
             {user === null && signup && <Signup />}
-            {user === null && reset && !signup && <ResetPassword />}
+            {user === null && reset && !signup && <ForgotPassword />}
 
         </div>
     )

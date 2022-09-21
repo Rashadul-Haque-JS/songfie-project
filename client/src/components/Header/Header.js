@@ -10,6 +10,9 @@ import './Header.scss'
 import { removeLocalStorage } from '../../common/localStorage'
 import { logOutUser, removeToken } from '../../features/users/authSlicer'
 import { resetFalse } from '../../features/booleanSlicer'
+import DrawerNavigate from './components/drawernav'
+
+
 
 
 export default function Header() {
@@ -29,7 +32,8 @@ export default function Header() {
         <div className='primaryHeader sticky-top'>
             <div className='headerUpper '>
                 <div className='menu'>
-                    <img src={menu} alt='menu' />
+                    {/* <img src={menu} alt='menu' /> */}
+                    <DrawerNavigate />
                 </div>
                 <Link to='/'>
                     <img src={logo} alt='logo' />
@@ -50,6 +54,7 @@ export default function Header() {
                 </div>}
 
             </div>}
+            
         </div>
 
     )

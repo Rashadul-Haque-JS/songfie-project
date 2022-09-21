@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-// import toast from 'react-hot-toast';
+import toast from 'react-hot-toast';
 import { removeSignup } from '../../../features/booleanSlicer'
 import { signup, saveToken } from '../../../api/api'
-import { addLogedUser, addToken, getPhoto } from '../../../features/users/authSlicer'
+import { addLogedUser, addToken} from '../../../features/users/authSlicer'
 import { useDispatch } from 'react-redux'
 import { setLocalStorage } from '../../../common/localStorage';
 
@@ -29,26 +29,32 @@ const Signup = () => {
         formData.append("password", password);
         formData.append("image", img);
 
-        const res = await signup(formData)
-        const data = res.data
-        if (res.data) {
-            dispatch(addLogedUser(data.newUser))
-            dispatch(addToken(data.token))
-            saveToken(data.token)
-            // dispatch(getPhoto())
-            navigate('/')
-            dispatch(removeSignup())
-            setLocalStorage('user', data.newUser)
-            setLocalStorage('token', data.token)
+        try {
+            const res = await signup(formData)
+            const data = res.data
+            if (res.data) {
+                dispatch(addLogedUser(data.newUser))
+                dispatch(addToken(data.token))
+                saveToken(data.token)
+                // dispatch(getPhoto())
+                navigate('/')
+                dispatch(removeSignup())
+                setLocalStorage('user', data.newUser)
+                setLocalStorage('token', data.token)
+                toast.success(`WELCOME ${data.newUser.name}`)
+            }
+        } catch (err) {
+            toast.error(err.message)
         }
 
-        
+
     }
 
     return (
-        <div className="loginContainer">
-            <div className='form-wrapper'>
-                <form className='login-container' onSubmit={handleSubmit} >
+        <div className="login">
+            <div className='form-group'>
+                <form className='login-form' onSubmit={handleSubmit} >
+                    <label className='fw-bold'>Signup</label>
                     <input type="text" placeholder='full name (no space between letters)' value={name} onChange={(e) => setName(e.target.value)} required />
                     <input type="text" placeholder='username (no space between letters)' value={username} onChange={(e) => setUsername(e.target.value)} required />
                     <input type="text" placeholder='email adress' value={email} onChange={(e) => setEmail(e.target.value)} required />

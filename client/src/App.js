@@ -11,18 +11,23 @@ import Mounts from './components/mount/Mount'
 import Auth from './components/auth/Auth';
 import PageNotFound from './components/helper/PageNotFound';
 import { Toaster } from 'react-hot-toast';
+import ResetPassword from './components/auth/ResetPassword';
+
 
 function App() {
   return (
     <div className="App">
       <BrowserRouter>
         <Header />
+        
         <div className='container mt-5'>
+    
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/songs" element={<Songs />} />
             <Route path='/songs/:track' element={<SingleSong />} />
             <Route path='/auth' element={<Auth />} />
+            <Route path='/reset/:id/:token' element={<ResetPassword />} />
             <Route path="*" element={<PageNotFound />} />
           </Routes>
         </div>

@@ -1,11 +1,11 @@
 import axios from 'axios'
-
+// added comments
 axios.defaults.baseURL = "http://localhost:8000/api";
 // auth
 
 export const saveToken = (token) => {
     console.log(token)
-    return axios.defaults.headers.common["Authorization"] = `Bearer ${token}`;
+    return axios.defaults.headers.common["Authorization"] = token;
 }
 
 export const login = async (email, password) => {
@@ -16,16 +16,16 @@ export const signup = async (formData) => {
 }
 
 export const logout = () => {
-    const empty = null
-    axios.defaults.headers.common['Authorization'] = `Bearer ${empty}`;
+    axios.defaults.headers.common['Authorization'] = '';
 }
 
 export const forgotPassword = async(email) => {
     return await axios.post("/forgotPassword", { email});
 }
 
-export const resetPassword = async(id,token) => {
-    return await axios.get(`/resetPassword/${id}/${token}`);
+export const resetPassword = async(id, token, password,)  => {
+   
+    return await axios.post(`/resetPassword/${id}/${token}`,{password});
 }
 
 

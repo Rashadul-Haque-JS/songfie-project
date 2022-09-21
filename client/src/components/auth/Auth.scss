@@ -1,58 +1,59 @@
 @import '../../common/style.scss';
 
-.auth {
+.auth,
+.reset-password {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap-reverse;
     color: #17A9FD;
     margin-top: 100px;
 
-    .loginWrapper {
+    .authWrapper,
+    .resetWrapper {
         display: grid;
         grid-template-columns: 1fr;
         place-content: center;
-        .loginText {
+
+        .authText,
+        .resetText {
             display: flex;
-                justify-content: center;
-                align-items:center;
-                margin-bottom: 360px;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 360px;
 
             h1 {
                 color: #17A9FD;
                 text-align: center;
                 padding: 40px 20px;
-              
+
 
             }
 
-            
+
         }
     }
 
 
-    .loginContainer {
+    .login,
+    .reset-form-container {
         width: 320px;
         display: flex;
         justify-content: center;
         align-items: flex-start;
 
 
-        .form-wrapper {
+        .form-group {
             box-shadow: -2px -1px 15px 4px rgba(0, 0, 0, 0.11);
             padding: 15px 24px;
             width: 100%;
             border-radius: 4px;
-            
 
-            .login-container {
+
+            .login-form,
+            .reset-form {
                 display: flex;
                 flex-direction: column;
                 align-items: center;
-
-                h2 {
-                    color: #17A9FD;
-                    text-align: center;
-                }
 
 
                 input,
@@ -61,6 +62,8 @@
                     margin-top: 24px;
                     padding: 4px;
                     border-radius: 5px;
+                    border: 1px solid #ccc;
+                    outline: none;
                 }
 
                 button {
@@ -73,18 +76,18 @@
             .manageLogin {
                 display: flex;
                 justify-content: space-between;
-                align-items:center;
+                align-items: center;
 
                 .reset,
                 .register {
                     margin-top: 8px;
                     color: #17A9FD;
-                    font-weight:bold;
+                    font-weight: bold;
                     cursor: pointer;
 
                 }
 
-                .reset{
+                .reset {
                     text-decoration: underline;
                     cursor: pointer;
                 }
@@ -94,6 +97,7 @@
 
         }
     }
+
 
 
 
