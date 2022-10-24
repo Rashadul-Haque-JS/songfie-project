@@ -6,6 +6,7 @@ import List from "@mui/material/List";
 import ListItem from "@mui/material/ListItem";
 import ListItemText from "@mui/material/ListItemText";
 import { Link } from "react-router-dom";
+import menu from '../../../assets/image/static/icon_menu.png'
 
 const DrawerNavigate = ({ variant, ...props }) => {
   const [open, setOpen] = useState(false);
@@ -47,7 +48,7 @@ const DrawerNavigate = ({ variant, ...props }) => {
 
       <Grid item>
         <Button onClick={() => setOpen(!open)}>
-          {open ? "Hide" : "Show"} Drawer
+          {open ? <img src={menu} alt='menu' /> : <img src={menu} alt='menu' />} 
         </Button>
       </Grid>
     </Grid>

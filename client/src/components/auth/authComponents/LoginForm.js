@@ -19,9 +19,9 @@ const LoginForm = () => {
         try {
             const res = await login(email, password);
             if (res.data.token) {
-                dispatch(addLogedUser(res.data.authUser));
+                dispatch(addLogedUser(res.data.currentUser));
                 dispatch(addToken(res.data.token));
-                setLocalStorage('user', res.data.authUser);
+                setLocalStorage('user', res.data.currentUser);
                 setLocalStorage('token', res.data.token);
                 // dispatch(getPhoto(res.data.userData._id))
                 navigate('/songs')

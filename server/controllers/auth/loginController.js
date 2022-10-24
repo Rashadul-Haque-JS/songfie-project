@@ -22,11 +22,11 @@ const login = async (req, res) => {
                     expiresIn: "1d",
                 });
 
-                const userData = await Users.findOne({ _id: user._id }).select(
+                const currentUser = await Users.findOne({ _id: user._id }).select(
                     "-password"
                 );
 
-                res.json({ userData, token });
+                res.json({ currentUser, token });
             }
 
 
