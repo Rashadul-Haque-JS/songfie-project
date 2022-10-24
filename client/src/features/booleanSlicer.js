@@ -4,7 +4,7 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
     play: false,
-    signup: false,
+    signup: true,
     reset: false,
     isDisabled: false,
 

@@ -44,9 +44,6 @@ export default function Header() {
                 </div>
             </div>
             {pathname !== '/auth' && <div className='headerLowerUser'>
-                {user === null && <Link to='/auth'>
-                    <button className='btn btn-primary btn-sm' onClick={()=>dispatch(resetFalse())}>Login</button>
-                </Link>}
                 {user !== null && <div className='username' >
                     <h1 className='h5'>{user.username}</h1>
                     <span className='logout text-muted' onClick={handleLogout}>Logout</span>

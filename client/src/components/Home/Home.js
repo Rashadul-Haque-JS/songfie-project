@@ -1,10 +1,11 @@
-import React, { useEffect, useState } from 'react'
-import { Link } from 'react-router-dom'
-import './Home.scss'
+import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
+import "./Home.scss";
+import Login from "../../components/auth/authComponents/LoginForm"
 
 const Home = () => {
   const [index, setIndex] = useState(0);
-  const imageName = ['mike', 'girlone', 'man', 'boy', 'girltwo']
+  const imageName = ["mike", "girlone", "man", "boy", "girltwo"];
   useEffect(() => {
     const intervalID = setInterval(() => {
       setIndex((index) => {
@@ -19,15 +20,14 @@ const Home = () => {
     return () => clearInterval(intervalID);
   }, []);
 
-
-  const backgroundImg = require(`../../assets/image/static/${imageName[index]}.png`)
+  const backgroundImg = require(`../../assets/image/static/${imageName[index]}.png`);
 
   return (
-    <div className='home'>
-      <div className="homeContent">
-        <div className='homeShowcase' style={{ backgroundImage: `url(${backgroundImg})`, backgroundPosition: 'center center', backgroundSize: 'cover', backgroundRepeat: 'no-repeat' }}>
+    <div className="row flex-wrap mt-4 mx-2 h-50 bg-danger rounded">
+      <div className="col-md-8 h-100 mb-5 ">
+      <div className='h-100 showcase d-flex flex-column justify-content-end' style={{ backgroundImage: `url(${backgroundImg})`, backgroundPosition: 'center center', backgroundSize: 'cover', backgroundRepeat: 'no-repeat' }}>
           <div className='overlay'></div>
-          <div className="showcaseInner">
+          <div className="showcase-inner">
             <h1>Do you love to sing? <span>
               Let your musical passion be flown
             </span><span>
@@ -39,43 +39,14 @@ const Home = () => {
             </h1>
         </div>
         </div>
-        <div className="shocaseHeadline">
-          <div className='showcaseHeadlineText'>
-            Singing's Life
-          </div>
-
-          <div className='homeBtnGroup'>
-            <div className='showcaseHeadlineBtn '>
-            <Link to='/songs'>
-              <span className='sing'>SING</span>
-            </Link>
-          </div>
-            <div className='showcaseHeadlineBtn '>
-              <Link to='/songs'>
-                <span className='listen'>LISTEN</span>
-              </Link>
-            </div>
-          </div>
+      </div>
+      <div className="col-md-4 d-flex justify-content-center align-items-center bg-dark mb-5 rounded">
+     
+        <Login/>
         </div>
 
-
-      </div>
-      <div className='functionalities'>
-        <div className='describtions orange'>...in progress</div>
-        <div className='describtions pink' >...in progress</div>
-        <div className='describtions red'>...in progress</div>
-        <div className='describtions blue'>...in progress</div>
-        <div className='describtions red'>...in progress</div>
-        <div className='describtions blue'>...in progress</div>
-
-
-      </div>
     </div>
+  );
+};
 
-
-
-
-  )
-}
-
-export default Home
+export default Home;
