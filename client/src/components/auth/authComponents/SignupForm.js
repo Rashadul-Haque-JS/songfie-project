@@ -52,7 +52,7 @@ const Signup = () => {
     }
 
     return (
-        <div className="login">
+        <div className="login bg-dark rounded">
             <div className='form-group'>
                 <form className='login-form' onSubmit={handleSubmit} >
                     <label className='fw-bold'>Signup</label>
@@ -60,7 +60,7 @@ const Signup = () => {
                     <input type="text" placeholder='username (no space between letters)' value={username} onChange={(e) => setUsername(e.target.value)} required />
                     <input type="text" placeholder='email adress' value={email} onChange={(e) => setEmail(e.target.value)} required />
                     <input type="text" placeholder='password' value={password} onChange={(e) => setPassword(e.target.value)} required />
-                    <span style={{ display: 'flex', flexDirection: 'column', justifyContent: 'flex-end', marginTop: '12px' }}>
+                    <span className='d-flex flex-column justify-content-end mt-1'>
                         <p >upload profile image</p>
 
                         <input type="file" onChange={(e) => setImg(e.target.files[0])} />
