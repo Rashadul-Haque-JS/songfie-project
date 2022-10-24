@@ -1,4 +1,7 @@
 const { Users } = require("../../models/users");
+const { Token } = require("../../models/token");
+
+
 const jwt = require("jsonwebtoken");
 const { InvalidCredentials, } = require("../../error/error");
 
@@ -19,12 +22,14 @@ const login = async (req, res) => {
                     expiresIn: "1d",
                 });
 
-                const userData = await Users.findOne({ _id: user._id }).select(
+                const currentUser = await Users.findOne({ _id: user._id }).select(
                     "-password"
                 );
-         
-                res.json({ userData, token });
+
+                res.json({ currentUser, token });
             }
+
+
 
         });
     } catch (error) {

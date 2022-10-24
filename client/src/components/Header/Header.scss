@@ -73,12 +73,19 @@
                 background: #000000;
                 outline:none;
                 border:none;
+                font-family: $font-headline;
 
             }
         }
 
         .username {
             display: flex;
+
+            .logout{
+                width: fit-content;
+                font-family: $font-headline;
+               
+            }
 
             span {
                 font-weight: bold;

@@ -1,13 +1,5 @@
-import { createSlice, createAsyncThunk } from "@reduxjs/toolkit"
-// import { getAvatar } from "../../api/api"
+import { createSlice} from "@reduxjs/toolkit"
 
-// export const getPhoto = createAsyncThunk(
-//     'photos/getPhotos',
-//     async(id)=>{
-//     const res = await getAvatar(id)
-//     return res
-//     }
-// )
 
 const initialState = {
     logedInUser: null,

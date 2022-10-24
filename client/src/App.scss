@@ -1,8 +1,9 @@
 @import '~bootstrap/scss/bootstrap.scss';
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Poppins:wght@400;500;600&display=swap');
 
-$body-bg:#ffdc62;
+$body-bg:#f6d691;
 $secondary-color:#E51B23;
+$color_plain:#fff;
 $optional-blue:#0042E4;
 $optional-royalblue:#0042E4;
 $optional-gray: #272727;
@@ -33,6 +34,10 @@ body{
   font-family: $font-primary;
 
 }
+.container{
+  height: 100vh;
+ 
+}
 
 a{
   text-decoration: none;
@@ -40,6 +45,40 @@ a{
   padding: 12px 0px;
   color:blue;
 }
+
+h1, h2, h3, h4, h5, h6{
+  font-family: $font-headLine;
+}
+
+.from-group ,.form-control{
+  border:none;
+  outline: none;
+  padding: 0;
+}
+
+input[type=text],input[type=password]{
+  border: none;
+  outline: none;
+  padding: 0px 8px;
+}
+
+textarea:focus, 
+textarea.form-control:focus, 
+input.form-control:focus, 
+input[type=text]:focus, 
+input[type=password]:focus, 
+input[type=email]:focus, 
+input[type=number]:focus, 
+[type=text].form-control:focus, 
+[type=password].form-control:focus, 
+[type=email].form-control:focus, 
+[type=tel].form-control:focus, 
+[contenteditable].form-control:focus {
+  box-shadow: inset 2 -1px 0 #ddd;
+  
+}
+
+
 
 
 
