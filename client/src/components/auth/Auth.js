@@ -6,28 +6,26 @@ import Signup from './authComponents/SignupForm'
 import ForgotPassword from './authComponents/ForgotPassword'
 import { useSelector } from 'react-redux';
 
-export default function Login() {
-    const user = useSelector((state) => state.authReducer.logedInUser)
-    const signup = useSelector((state) => state.booleanReducer.signup)
-    const reset = useSelector((state) => state.booleanReducer.reset)
 
 
-    return (
-        <div className='auth'>
-            <div className='authWrapper'>
-                <div className='authText'>
-                    {user !== null && <div className=" d-flex flex-column justify-content-center align-items-center">
-                        <h1 className='h4'>You are already inlogged!</h1>
-                        <Link to="/songs" className='mt-3 text-center'>Back To Gallery</Link>
-                        </div>}
-                    {user === null && <h1 className='h3'>Songfie respect and appriciate your singing</h1>}
+const AuthRegister = () => {
+  const user = useSelector((state) => state.authReducer.logedInUser);
+  const signup = useSelector((state) => state.booleanReducer.signup);
+  const reset = useSelector((state) => state.booleanReducer.reset);
 
-                </div>
-            </div>
-            {user === null && !signup && !reset && < LoginForm />}
-            {user === null && signup && <Signup />}
-            {user === null && reset && !signup && <ForgotPassword />}
-
+  return (
+    <div className="auth">
+      <div className="authWrapper">
+        <div className="authText">
+          {user === null && (
+            <h1 className="h3">Songfie respect and appriciate your singing</h1>
+          )}
         </div>
-    )
-}
+      </div>
+      {user === null && signup && <Signup />}
+      {user === null && reset && !signup && <ForgotPassword />}
+    </div>
+  );
+};
+
+export default AuthRegister;

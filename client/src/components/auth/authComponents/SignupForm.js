@@ -6,6 +6,7 @@ import { signup, saveToken } from '../../../api/api'
 import { addLogedUser, addToken} from '../../../features/users/authSlicer'
 import { useDispatch } from 'react-redux'
 import { setLocalStorage } from '../../../common/localStorage';
+import { Link } from 'react-router-dom';
 
 
 const Signup = () => {
@@ -69,7 +70,7 @@ const Signup = () => {
                 </form>
                 <div className='manageLogin'>
                     <div >
-                        <p className='reset' onClick={() => dispatch(removeSignup())}>login</p>
+                        <Link to={'/'}>Login</Link>
                     </div>
                     <div>
                         <p className='register'>Thank you</p>

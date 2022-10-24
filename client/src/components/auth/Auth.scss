@@ -1,104 +1,114 @@
-@import '../../common/style.scss';
+@import "../../common/style.scss";
 
 .auth,
 .reset-password {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap-reverse;
+  color: #17a9fd;
+  margin-top: 100px;
+
+  .authWrapper,
+  .resetWrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+    place-content: center;
+
+    .authText,
+    .resetText {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 360px;
+
+      h1 {
+        color: #17a9fd;
+        text-align: center;
+        padding: 40px 20px;
+      }
+    }
+  }
+
+  .login,
+  .reset-form-container {
+    width: 320px;
     display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap-reverse;
-    color: #17A9FD;
-    margin-top: 100px;
+    justify-content: center;
+    align-items: flex-start;
 
-    .authWrapper,
-    .resetWrapper {
-        display: grid;
-        grid-template-columns: 1fr;
-        place-content: center;
+    .form-group {
+      box-shadow: -2px -1px 15px 4px rgba(0, 0, 0, 0.11);
+      padding: 15px 24px;
+      width: 100%;
+      border-radius: 4px;
 
-        .authText,
-        .resetText {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin-bottom: 360px;
-
-            h1 {
-                color: #17A9FD;
-                text-align: center;
-                padding: 40px 20px;
-
-
-            }
-
-
-        }
-    }
-
-
-    .login,
-    .reset-form-container {
-        width: 320px;
+      .login-form,
+      .reset-form {
         display: flex;
-        justify-content: center;
-        align-items: flex-start;
+        flex-direction: column;
+        align-items: center;
 
-
-        .form-group {
-            box-shadow: -2px -1px 15px 4px rgba(0, 0, 0, 0.11);
-            padding: 15px 24px;
-            width: 100%;
-            border-radius: 4px;
-
-
-            .login-form,
-            .reset-form {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-
-
-                input,
-                button {
-                    width: 100%;
-                    margin-top: 24px;
-                    padding: 4px;
-                    border-radius: 5px;
-                    border: 1px solid #ccc;
-                    outline: none;
-                }
-
-                button {
-                    cursor: pointer;
-                    background-color: #17A9FD;
-                    color: white
-                }
-            }
-
-            .manageLogin {
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-
-                .reset,
-                .register {
-                    margin-top: 8px;
-                    color: #17A9FD;
-                    font-weight: bold;
-                    cursor: pointer;
-
-                }
-
-                .reset {
-                    text-decoration: underline;
-                    cursor: pointer;
-                }
-
-
-            }
-
+        input,
+        button {
+          width: 100%;
+          margin-top: 24px;
+          padding: 4px;
+          border-radius: 5px;
+          border: 1px solid #ccc;
+          outline: none;
         }
+
+        button {
+          cursor: pointer;
+          background-color: #17a9fd;
+          color: white;
+        }
+      }
+
+      .manageLogin {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .reset,
+        .register {
+          margin-top: 8px;
+          color: #17a9fd;
+          font-weight: bold;
+          cursor: pointer;
+        }
+
+        .reset {
+          text-decoration: underline;
+          cursor: pointer;
+        }
+      }
     }
+  }
+}
 
-
-
-
+.text-animated{
+  position: relative;
+  font-size: 1.8rem !important;
+  font-family: $font-headline;
+  font-weight: 500;
+  text-transform: uppercase;
+  background: linear-gradient(
+    135deg,
+    #5335cf 0%,
+    #ffffff 25%,
+    #f66e48 50%,
+    #de005e 75%,
+    #ffffff 100%
+  );
+  animation: animate 5s linear infinite;
+  background-size: 400%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+@keyframes animate {
+  100% {
+    background-position: 100%;
+  }
 }

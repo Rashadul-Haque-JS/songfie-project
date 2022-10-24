@@ -5,13 +5,13 @@ import './helper.scss'
 
 const PageNotFound =() =>{
     return (
-      <div className="d-flex flex-column justify-content-around align-items-center h-100 ">
+      <div className="d-flex flex-column justify-content-around align-items-center pnf ">
         <div>
         <h1 className="text-center text-danger font-weight-bolder">404</h1>
         <h2 className="h5">Page not found</h2>
         </div>
         
-        <div className=" d-flex flex-column justify-content-around align-items-center">
+        <div className=" d-flex flex-column justify-content-around align-items-center pnf-logo">
         <Link to="/" className='mb-3 '>Back To Home</Link>
             <img className='rounded' src={logo} alt ="logo" />
         </div>

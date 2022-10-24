@@ -1,29 +1,13 @@
 @import "../../common/style.scss";
 
-.home {
-  position: relative;
-
-  .homeContent {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    width: 100%;
-    height: 500px;
-
-    .homeShowcase {
+    .showcase {
       position: relative;
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-end;
-      align-items: center;
       transition: all 5s;
       animation-direction: alternate;
       animation-duration: 30s;
       animation-fill-mode: backwards;
-      animation-iteration-count: infinite;
-      padding-top: 150px;
-      box-shadow: inset 0 1px 2px 2px $optional-pink;
-      flex: 1;
+      animation: animate 5s linear infinite;
+      // box-shadow: inset 0 1px 2px 2px $optional-pink;
 
       @keyframes animate {
         0% {
@@ -40,7 +24,7 @@
         background-color: rgba(0, 0, 0, 0.3);
       }
 
-      .showcaseInner {
+      .showcase-inner {
         z-index: 1;
         background-color: rgba(0, 0, 0, 0.5);
         width: 100%;
@@ -64,141 +48,6 @@
       }
     }
 
-    .shocaseHeadline {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      width: 400px;
-      background: #000000;
-      padding: 40px 0px;
-      // flex:1;
+    
 
-      .showcaseHeadlineText {
-        position: relative;
-        font-size: 2.2rem !important;
-        font-family: $font-headline;
-        font-weight: 500;
-        text-transform: uppercase;
-        background: linear-gradient(135deg, #5335cf 0%, #ffffff 25%, #f66e48 50%, #de005e 75%, #ffffff 100%);
-        animation: animate 5s linear infinite;
-        background-size: 400%;
-        background-clip: text;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-
-      }
-
-      @keyframes animate {
-        100% {
-          background-position: 100%;
-        }
-      }
-
-      .homeBtnGroup {
-        display: flex;
-        padding-top: 32px;
-
-        .showcaseHeadlineBtn {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-
-          a {
-            position: relative;
-            width: 104px;
-            height: 36px;
-            display: inline-block;
-            background-color: $secondary-color;
-            margin: 20px;
-            border-radius: 12px;
-
-
-            span {
-              position: absolute;
-              top: 0;
-              left: 0;
-              width: 100%;
-              height: 100%;
-              display: inline-block;
-              background-color: #0e1538;
-              z-index: 10;
-              display: flex;
-              justify-content: center;
-              align-items: center;
-              font-size: 1.2em;
-              letter-spacing: 2px;
-              color: #ffffff;
-              border: 1px solid #040a29;
-              overflow: hidden;
-              border-top-right-radius: 16px;
-              border-bottom-left-radius: 16px;
-            }
-
-            span:before {
-              content: "";
-              position: absolute;
-              top: 0;
-              left: -50%;
-              width: 100%;
-              height: 100%;
-              display: inline-block;
-              background: rgba(255, 255, 255, 0.075);
-              transform: skew(25deg);
-              z-index: 10;
-              display: flex;
-              justify-content: center;
-              align-items: center;
-              font-size: 1.2em;
-              letter-spacing: 2px;
-              color: $secondary-color;
-              border: 1px solid #040a29;
-            }
-          }
-
-          a:before,
-          a:after {
-            content: "";
-            position: absolute;
-            inset: 0;
-            background: linear-gradient(45deg, $optional-blue, #0e1538, $optional-pink);
-            transition: 0.5s;
-          }
-
-          a:hover:before {
-            inset: -3px;
-          }
-
-          a:hover:after {
-            inset: -3px;
-            filter: blur(10px);
-          }
-        }
-
-
-      }
-
-    }
-
-  }
-
-  .functionalities {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    padding: 8px;
-    margin-top: 100px;
-    position: relative;
-
-    .describtions {
-      padding: 12px;
-      box-shadow: inset 0 0 2px 2px $optional-pink;
-      min-height: 250px;
-      min-width: 350px;
-      margin: 24px;
-      text-align: center;
-      color: #ffffff;
-    }
-  }
-}
+  
