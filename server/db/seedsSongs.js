@@ -7,7 +7,7 @@ const songs = require("./songs.json");
 const createSongs = async () => {
     await Songs.deleteMany({});
     songs.forEach(async (song) => {
-        const newSongs = await new Songs(song);
+        const newSongs = new Songs(song);
         await newSongs.save();
     });
 

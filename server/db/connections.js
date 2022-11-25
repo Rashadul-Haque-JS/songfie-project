@@ -1,10 +1,8 @@
 require("dotenv").config();
 const mongoose = require("mongoose");
 
-const { DATABASE_URL } = process.env;
-
 const songfieDB = async () => {
-    await mongoose.connect(`${DATABASE_URL}songfie`);
+    await mongoose.connect(process.env.DATABASE_URL);
     console.log("connected");
    
 };
